@@ -1,0 +1,34 @@
+.link {
+    cursor: pointer;
+  }
+  .right {
+    padding: 10px;
+  }
+  .sections {
+      margin-top: 20px;
+  }
+  .moduleName {
+    text-align: left;
+  }
+  .maincol {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  
+  
+  .vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #ccc;
+  }
+  
+  .vertical-menu a.active {
+    background-color: #4a6de2;
+    color: white;
+  }
