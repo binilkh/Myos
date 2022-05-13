@@ -14,9 +14,11 @@ describe("Order  page tests", () =>{
   const fetchData = jest.fn(() => Promise.resolve(successResult));
 
   test("Order render", () => {  
-      render(<BrowserRouter><Order /></BrowserRouter>);
-      fireEvent.click(document.querySelector('#submit'));
-      expect(handleSubmit).toHaveBeenCalledTimes(0);
+    const { getByText, getByTestId } = render(<BrowserRouter><Order /></BrowserRouter>);
+    const parent = getByTestId('parent');
+    fireEvent.click(document.querySelector('#submit'));
+    expect(handleSubmit).toHaveBeenCalledTimes(0);
+    expect(getByText(/email/i)).toBeInTheDocument();
   });
   test("Order data", async () => {  
     render(<BrowserRouter><Order /></BrowserRouter>);

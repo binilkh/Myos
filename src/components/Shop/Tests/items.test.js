@@ -15,6 +15,7 @@ describe("Shop items  page tests", () =>{
   const handleSubmit = jest.fn();
   const decNum = jest.fn();
   const incNum = jest.fn();
+  const handleChange = jest.fn();
   const cart = [{
     id: 1,
     title: 'item',
@@ -30,6 +31,9 @@ describe("Shop items  page tests", () =>{
       expect(incNum).toHaveBeenCalledTimes(0);
       fireEvent.click(document.querySelector('#dec'));
       expect(decNum).toHaveBeenCalledTimes(0);
+      expect(document.querySelector('#form1')).toBeInTheDocument();
+      fireEvent.change(document.querySelector('#form1'));
+      expect(handleChange).toHaveBeenCalledTimes(0);
     });
   
 })

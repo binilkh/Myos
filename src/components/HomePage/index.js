@@ -30,9 +30,9 @@ const HomePage= (props) => {
     <div className="HomePage">
        <div className="row">
        <div className="col-md-2">
-         <div class="vertical-menu">
-          <Link title="shop" class={shopActive} to="/Shop" onClick={()=>setCount(0)}>{t("Shop")}</Link>
-          <Link title="order" class={orderActive} to="/Order" onClick={()=>setCount(1)}>{t("My Orders")}</Link>
+         <div className="vertical-menu">
+          <Link title="shop" className={shopActive} to="/Shop" onClick={()=>setCount(0)}>{t("Shop")}</Link>
+          <Link title="order" className={orderActive} to="/Order" onClick={()=>setCount(1)}>{t("My Orders")}</Link>
         </div>
       </div>
       <div className="col-md-10 d-sm-block maincol">

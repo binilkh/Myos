@@ -59,6 +59,10 @@
       "src/**/*.js",
       "!src/index.js"
     ],
-    "coverageReporters": ["json", "html", "text"]
+    "coverageReporters": [
+      "json",
+      "html",
+      "text"
+    ]
   }
 }

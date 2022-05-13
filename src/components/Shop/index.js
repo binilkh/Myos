@@ -35,10 +35,10 @@ const Shop = (props) => {
     });
     
     return(
-        <section className="sliders mb-sm-4">
+        <section className="sliders mb-sm-4" data-testid="parent">
             <div className="container py-2 h-100">
             <div className="row">
-                Shop
+                {t('Shop')}
             </div>
             <div className="row">
                 <div className="col-md-12" style={{"padding":"0px"}}>
@@ -81,7 +81,7 @@ const Shop = (props) => {
                             
                         </div>
                         <div className="col-md-3">
-                            <h6><div className="fw-normal mb-0 text-black">Cart</div></h6>
+                            <h6><div className="fw-normal mb-0 text-black">{t('Cart')}</div></h6>
                             <Cart cartItems={cart} addTocart={addTocart}/>
                         </div>
                     </div>

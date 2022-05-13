@@ -1,8 +1,8 @@
 import React from "react";
 import { render, screen, fireEvent } from '@testing-library/react';
 import { BrowserRouter } from "react-router-dom";
-import { insertOrder } from "../../services/itemService";
-import Cart from "./index";
+import { insertOrder } from "../../../services/itemService";
+import Cart from "../index";
 
 describe("cart tests", () =>{
   test("cart renders", () => {
@@ -25,7 +25,7 @@ describe("cart tests", () =>{
     expect(confirmCheckout).toHaveBeenCalledTimes(0);
     expect(checkout).toEqual(true);
   });
-  test("cart changes value when clicked", async() => {
+  test("cart changes value when clicked", async () => {
     const ins = await insertOrder();
   })
 })

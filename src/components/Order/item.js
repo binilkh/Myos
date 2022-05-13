@@ -6,7 +6,7 @@ const Items = (props) => {
     const {item } = props;
     const { t, i18n } = useTranslation();
     return(
-        <div className="row">
+        <div className="row" data-testid="subchild">
             <div className="col-md-2 col-lg-2 col-xl-2  col-xs-2">
                 <img src={`${siteUrl}/images/${item ? item.image : ''}`}
                     className="img-fluid rounded-3" alt="Cotton T-shirt"/>

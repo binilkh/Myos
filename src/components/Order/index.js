@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import ItemHeads from "./itemsHead";
 
 const Order = (props) => {
-    const [items, setItems] = useState([]);
+    const [ items, setItems ] = useState([]);
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const { t, i18n } = useTranslation();
     useEffect(() => {
@@ -31,10 +31,10 @@ const Order = (props) => {
     }
     const uniqueHeads = [...new Set(itemHeadArray)];
     return(
-        <section className="sliders mb-sm-4">
+        <section className="sliders mb-sm-4" data-testid="parent">
             <div className="container py-2 h-100">
             <div className="row">
-                Orders
+                {t('My Orders')}
             </div>
             <div className="row">
                 <div className="col-md-12">
